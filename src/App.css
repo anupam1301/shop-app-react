@@ -57,3 +57,9 @@
 #datalist{
   padding-top: 180px;
 }
+
+#chkOut{
+  display: block;
+  margin-left:auto;
+  margin-right: auto;
+}

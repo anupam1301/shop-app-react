@@ -30,7 +30,11 @@ class App extends Component {
 
         const cart =Moltin.Cart()
             .Items()
-            .then(cart => {debugger;
+            .then(cart => {
+
+            if (cart.data.length==0){
+                $("#chkOut").hide();
+            }
 
 
             dis.setState({cartData:cart.data});

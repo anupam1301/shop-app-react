@@ -13,6 +13,9 @@ onButtonClick(u,n,t){
 
     Moltin.Cart().AddProduct(u, 1).then((item) => {
 
+            $("#chkOut").show();
+
+
         alert(`Added ${n} to your cart`);
 
     }).catch((e)=>{alert(e.errors[0].detail)});
@@ -20,6 +23,9 @@ onButtonClick(u,n,t){
     const cart =Moltin.Cart()
         .Items()
         .then(cart => {
+            if (cart.data.length==0){
+                $("#chkOut").hide();
+            }
           var cartVal= "$"+(cart.meta.display_price.with_tax.amount)/100;
           t.setState({cart:cartVal});
 
@@ -53,7 +59,8 @@ onButtonClick(u,n,t){
                 <h4>{name}</h4><br />
                 {desc}<br />
                 <h5>$ {price}</h5><br />
-                <button onClick={()=>this.onButtonClick(uid,name,dis)}>Add To Cart</button>
+                <button onClick={()=>this.onButtonClick(uid,name,dis)}>Add To Cart</button><br />
+                -------------------------------------------------------------------------------
             </div>
         );
     }
