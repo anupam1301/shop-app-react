@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { gateway as MoltinGateway } from '@moltin/sdk';
+import $ from "jquery";
 
 const Moltin = MoltinGateway({
     client_id: 'SCJp18sLGv7Ia3I6igslkmGxyRIGzlYaLXXRQoTVd6'
@@ -13,11 +14,12 @@ onButtonClick(u,n,t){
     Moltin.Cart().AddProduct(u, 1).then((item) => {
 
         alert(`Added ${n} to your cart`);
+
     }).catch((e)=>{alert(e.errors[0].detail)});
 
     const cart =Moltin.Cart()
         .Items()
-        .then(cart => {debugger;
+        .then(cart => {
           var cartVal= "$"+(cart.meta.display_price.with_tax.amount)/100;
           t.setState({cart:cartVal});
 
