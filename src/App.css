@@ -12,10 +12,10 @@
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  /*display: flex;*/
+  /*flex-direction: column;*/
+  /*align-items: center;*/
+  /*justify-content: center;*/
   font-size: calc(10px + 2vmin);
   color: white;
 }
@@ -33,6 +33,11 @@
   }
 }
 
+#main-content {
+  width: calc(100% - 260px);
+  margin-left: 0;
+}
+
 #sidebar{
   height: 99.9%;
   /*border: 1px solid white;*/
@@ -47,4 +52,8 @@
   position: absolute;
   left: 0;
   top: 0;
+}
+
+#datalist{
+  padding-top: 180px;
 }
