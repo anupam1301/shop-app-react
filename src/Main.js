@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { gateway as MoltinGateway } from '@moltin/sdk';
 
 const Moltin = MoltinGateway({
-    client_id: 'Ow3jZEuoZ8oLeb2wdLJxBLh3d1aVEFDNvOboeB3p4U'
+    client_id: 'SCJp18sLGv7Ia3I6igslkmGxyRIGzlYaLXXRQoTVd6'
 });
 
 
