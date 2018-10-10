@@ -3,8 +3,10 @@
 }
 
 .App-logo {
+  position: absolute;
   animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+  height: 20vmin;
+  top: 0;
 }
 
 .App-header {
@@ -29,4 +31,20 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+#sidebar{
+  height: 99.9%;
+  /*border: 1px solid white;*/
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 260px;
+  background: darkslategray;
+}
+
+#heading1{
+  position: absolute;
+  left: 0;
+  top: 0;
 }

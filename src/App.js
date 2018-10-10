@@ -8,14 +8,19 @@ class App extends Component {
         return (
             <div className="App">
             <header className="App-header">
+                <p id="heading1"> Shopping App</p>
             <img src={logo} className="App-logo" alt="logo" />
-            <p>
-            Edit <code>src/App.js</code> and save to reload.
-            </p>
 
-            <Main />
+                <div id="sidebar">
+
+                </div>
+
+                <Main />
 
             </header>
+
+
+
             </div>
     );
     }
